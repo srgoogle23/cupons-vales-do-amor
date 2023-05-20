@@ -37,7 +37,7 @@ if(isset($_POST['nome']) && isset($_POST['descricao']) && isset($_POST['quantida
 		$nome = $vale[0]['nome'];
 		execute("UPDATE `vales` SET `quantidade` = `quantidade` - 1 WHERE `id` = " . $_GET['usar_vale']);
 		echo '<script>alert("Vale utilizado com sucesso!");</script>';
-		if(isset($_GET['user']) && $_GET['user'] == 1) {
+		if(isset($_SESSION['user_token']) && $_SESSION['user_token'] == 1) {
 			mail("carolinaassis100@gmail.com", "Vale utilizado", "O vale " . $nome . " foi utilizado por Leonardo Oliveira!");
 		} else {
 			mail("leooli.teixeira@gmail.com", "Vale utilizado", "O vale " . $nome . " foi utilizado por Carolina Assis!");
