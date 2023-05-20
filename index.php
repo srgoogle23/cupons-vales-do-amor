@@ -3,7 +3,7 @@
 
 session_start();
 require_once dirname(__FILE__) . '/db.php';
-$URL = 'http://localhost/cupons-vales-do-amor/';
+$URL = 'https://vales.leonardoliveira.com/';
 
 if(isset($_POST['nome']) && isset($_POST['descricao']) && isset($_POST['quantidade'])){
 	$nome = $_POST['nome'];
@@ -22,6 +22,13 @@ if(isset($_POST['nome']) && isset($_POST['descricao']) && isset($_POST['quantida
 	) {
 		// configura o token de sessão
 		$_SESSION['user_token'] = '1';
+		require_once dirname(__FILE__) . '/home.php';
+	} else if(
+		$user == 'carol' &&
+		$password == '123456'
+	) {
+		// configura o token de sessão
+		$_SESSION['user_token'] = '0';
 		require_once dirname(__FILE__) . '/home.php';
 	} else {
 		echo '<script>alert("Usuario ou senha incorretos!");</script>';
