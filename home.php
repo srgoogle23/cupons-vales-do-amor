@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="pt-BR" data-bs-theme="auto">
 
 <head>
 	<meta charset="utf-8">
@@ -113,7 +113,7 @@
 					<h1 class="fw-light">Cupons vale do amor</h1>
 					<p class="lead text-body-secondary">Com a intencao de dar aquela esquentada na relacao, criei este site para que possamos cadastrar vales semanais para o parceiro usar.</p>
 					<p>
-						<a href="#" class="btn btn-primary my-2">Cadastrar vale</a>
+						<a href="?cadastrar-vale=1" class="btn btn-primary my-2">Cadastrar vale</a>
 					</p>
 				</div>
 			</div>
