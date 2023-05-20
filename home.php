@@ -1,6 +1,7 @@
 <?php
 
-$vales = select("SELECT * FROM `vales` WHERE quantidade > 0");
+$usuario_pesquisa = $_SESSION['user_token'] == 1 ? 0 : 1;
+$vales = select("SELECT * FROM `vales` WHERE quantidade > 0 AND usuario_id = $usuario_pesquisa");
 
 ?>
 
